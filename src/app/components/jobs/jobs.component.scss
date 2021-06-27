@@ -1,0 +1,39 @@
+@import 'variables.scss';
+
+.jobs-container {
+  .mat-card {
+    margin-bottom: 1rem;
+    background: #fff;
+
+    .mat-card-header-text {
+      margin: 0;
+    }
+
+    .job-text {
+      display: -webkit-box;
+      -webkit-box-orient: vertical;
+      -webkit-line-clamp: 3; /* Change this line if you want. In this case it trimmed the text to 3 lines. */
+      overflow: hidden;
+      line-height: 1.7;
+    }
+
+    .mat-card-subtitle {
+      color: $dark-blue;
+    }
+  }
+
+  .jobs-button {
+    width: 100%;
+    border-top: 2px solid $dark-blue;
+    border-radius: 0;
+
+    &:hover {
+      background: $grey;
+    }
+  }
+
+  .new-search-button {
+      background: #0077c8;
+      color: white;
+  }
+}

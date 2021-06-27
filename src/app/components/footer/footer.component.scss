@@ -1,0 +1,25 @@
+@import 'variables';
+
+footer {
+  background: $grey;
+  padding: 1rem 2rem;
+
+  p {
+    font-size: 1em;
+    color: #555;
+  }
+
+  a {
+    color: $blue;
+    text-decoration: none;
+
+    &:hover,
+    &:focus {
+      text-decoration: underline;
+    }
+  }
+}
+
+::ng-deep .mat-list.mat-list-base .mat-list-item {
+  height: 28px;
+}

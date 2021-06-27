@@ -1,0 +1,34 @@
+$dark-blue: #003349;
+$blue: #0077c8;
+$grey: #e0e6e9;
+
+$break-extra-small: 600px;
+$break-small: 830px;
+$break-medium: 1200px;
+$break-large: 1600px;
+
+@mixin breakpoint( $media ) {
+  @if ( $media == xsmall ) {
+    @media only screen and (max-width : $break-extra-small) {
+      @content;
+    }
+  }
+
+  @else if ( $media == small ) {
+    @media only screen and (max-width : $break-small - 1) {
+      @content;
+    }
+  }
+
+  @else if ( $media == medium ) {
+    @media only screen and (max-width : $break-medium - 1) {
+      @content;
+    }
+  }
+
+  @else if ( $media == large ) {
+    @media only screen and (max-width : $break-large - 1) {
+      @content;
+    }
+  }
+}

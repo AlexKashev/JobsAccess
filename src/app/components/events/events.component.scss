@@ -1,0 +1,43 @@
+@import 'variables';
+
+h1 {
+  text-align: center;
+  padding: 2rem;
+}
+
+
+.events-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 2rem;
+
+  .mat-card {
+    width: 400px;
+    height: auto;
+    margin-bottom: 1rem;
+    background: #fff;
+
+    .mat-card-subtitle {
+      color: $dark-blue;
+    }
+
+    p {
+      display: -webkit-box;
+      -webkit-box-orient: vertical;
+      -webkit-line-clamp: 3; /* Change this line if you want. In this case it trimmed the text to 3 lines. */
+      overflow: hidden;
+    }
+
+    button {
+      width: 100%;
+      border-top: 2px solid $dark-blue;
+      border-radius: 0;
+      color: $dark-blue;
+
+      &:hover {
+        background: $grey;
+      }
+    }
+  }
+}

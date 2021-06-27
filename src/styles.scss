@@ -1,0 +1,43 @@
+@import 'variables';
+
+html, body { 
+  height: 100%;
+}
+
+body { 
+  margin: 0; 
+  font-family: Roboto, "Helvetica Neue", sans-serif; 
+}
+
+section, header {
+  padding: 2rem;
+}
+
+.mat-list-base .mat-list-item,
+button.mat-flat-button {
+  font-size: 1em;
+}
+
+mat-grid-tile.mat-grid-tile .mat-figure {
+  justify-content: flex-start ;
+  align-items: flex-start;
+}
+
+button, a, input {
+  &:focus-visible{
+    outline: 2px solid purple !important;
+    outline-offset: 5px !important; 
+  }
+}
+
+mat-label {
+  color: $dark-blue;
+}
+
+button, a {
+  transition: transform 0.2 ease-in-out;
+
+  &:hover {
+    transform: scale(1.05);
+  }
+}

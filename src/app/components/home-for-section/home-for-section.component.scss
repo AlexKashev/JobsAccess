@@ -1,0 +1,38 @@
+@import 'variables';
+
+section {
+  display: flex;
+  background: $grey;
+  color: $dark-blue;
+
+  @include breakpoint(xsmall) {
+    display: block;
+  }
+
+  .for-column {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    text-align: center;
+    width: 50%;
+    border-right: 2px solid $dark-blue;
+
+    @include breakpoint(xsmall) {
+      width: 100%;
+      border: none;
+    }
+
+    &:last-of-type {
+      border-right: none;
+    }
+
+    h2 {
+      width: 100%;
+    }
+
+    button {
+      margin-right: 10px;
+      border: 2px solid $dark-blue;
+    }
+  }  
+}

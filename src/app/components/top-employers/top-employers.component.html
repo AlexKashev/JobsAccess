@@ -1,0 +1,12 @@
+<section>
+  <h2>Our best employers</h2>
+
+  <div class="top-employers-container">
+    <a href="https://google.com" target="_blank" [attr.aria-label]="'Link to ' + employer + ' site'"
+      *ngFor="let employer of employers">
+      <mat-card>
+        <img src="{{ 'assets/employers/' + employer + '.jpg' }}" alt="{{ employer }}">
+      </mat-card>
+    </a>
+  </div>
+</section>

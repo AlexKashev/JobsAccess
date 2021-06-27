@@ -1,0 +1,13 @@
+<section *ngIf="event" class="event-container">
+  <h1>{{ event.title }}</h1>
+
+  <h2>{{ event.city }}</h2>
+
+  <h3>{{ event.date }}</h3>
+
+  <img src="{{event.image}}" alt="event image">
+
+  <p>
+    {{ event.text }}
+  </p>
+</section>

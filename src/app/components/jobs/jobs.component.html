@@ -1,0 +1,29 @@
+<section>
+  <h2>List of jobs</h2>
+
+  <div class="jobs-container">
+    <mat-card *ngFor="let job of jobs">
+      <mat-card-header>
+        <mat-card-title>
+          <h3>{{ job.title }}</h3>
+        </mat-card-title>
+        <mat-card-subtitle>{{ job.city }}</mat-card-subtitle>
+      </mat-card-header>
+
+      <mat-card-content>
+        <div class="job-text" [innerHTML]="job.text"></div>
+      </mat-card-content>
+
+      <mat-card-actions>
+        <button [attr.aria-label]="'Check more details about a ' + job.title + ' job'" class="jobs-button"
+          mat-flat-button routerLink="{{ job.id }}">View more details</button>
+      </mat-card-actions>
+    </mat-card>
+
+    <p *ngIf="!jobs.length">Sorry but there are not available jobs for you search. You can start a new search from the
+      button below.</p>
+    <button mat-flat-button class="new-search-button">
+      Start a new one
+    </button>
+  </div>
+</section>
