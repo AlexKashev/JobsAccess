@@ -24,8 +24,6 @@ export class AddJobComponent implements OnInit {
   }
 
   addNewJob() {
-    alert( this.jobForm.value.title + ', ' + this.jobForm.value.city + ', ' + this.jobForm.value.text );
-
     this.jobsService.addNewJob( this.jobForm.value );
   }
 
