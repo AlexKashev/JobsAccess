@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { of, Subject } from 'rxjs';
+import { BehaviorSubject, of, Subject } from 'rxjs';
 import { HttpClient } from '@angular/common/http';
 import { tap } from 'rxjs/operators';
 
@@ -7,7 +7,7 @@ import { tap } from 'rxjs/operators';
   providedIn: 'root'
 } )
 export class JobsService {
-  currentFilter = new Subject();
+  currentFilter = new BehaviorSubject( '' );
   focusSearchForm = new Subject();
   allJobs: any;
 

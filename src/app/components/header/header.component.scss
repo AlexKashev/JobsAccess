@@ -9,13 +9,8 @@
   border-bottom: 1px solid $dark-blue;
 
   .skip-to-content-link {
-    left: 50%;
-    position: absolute;
-    transform: translateY(-100%);
-  }
-
-  .skip-to-content-link {
     text-decoration: none;
+    border: none;
     background: $blue;
     color: white;
     border-radius: 4px;

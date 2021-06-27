@@ -1,9 +1,10 @@
 <mat-toolbar class="header">
   <a href="#" routerLink="home" class="logo"><img src="assets/logo.png"
       alt="Jobs Access logo. Access the Home page"></a>
-  <a class="skip-to-content-link" aria-label="Go to the main content of the page" href="#main">
+
+  <button class="skip-to-content-link" aria-label="Go to the main content of the page" (click)="goToSearchForm()">
     Skip to content
-  </a>
+  </button>
 
   <button *ngIf="fontSizeIncreased; else decrease" mat-flat-button class="descrease-button" color="primary"
     (click)="decreasePageFontSize()">Decrease font</button>

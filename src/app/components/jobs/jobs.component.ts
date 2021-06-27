@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
 import { JobsService } from 'src/app/services/jobs.service';
 import { FormControl, FormGroup } from '@angular/forms';
 import { StatusService } from 'src/app/services/status.service';
@@ -8,7 +8,7 @@ import { StatusService } from 'src/app/services/status.service';
   templateUrl: './jobs.component.html',
   styleUrls: ['./jobs.component.scss']
 } )
-export class JobsComponent implements OnInit {
+export class JobsComponent implements OnInit, OnDestroy {
   filterForm = new FormGroup( {
     all: new FormControl( '' ),
     city: new FormControl( '' )

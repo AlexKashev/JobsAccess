@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { JobsService } from 'src/app/services/jobs.service';
 
 @Component( {
   selector: 'app-header',
@@ -8,11 +9,10 @@ import { Component, OnInit } from '@angular/core';
 export class HeaderComponent implements OnInit {
   fontSizeIncreased = false;
 
-  constructor() { }
+  constructor( private jobsService: JobsService ) { }
 
   ngOnInit(): void {
   }
-
 
   increasePageFontSize() {
     document.body.style.fontSize = 20 + 'px';
@@ -24,5 +24,9 @@ export class HeaderComponent implements OnInit {
     document.body.style.fontSize = 16 + 'px';
 
     this.fontSizeIncreased = false;
+  }
+
+  goToSearchForm() {
+    this.jobsService.focusSearchForm.next();
   }
 }
