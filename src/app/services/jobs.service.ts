@@ -8,6 +8,7 @@ import { tap } from 'rxjs/operators';
 } )
 export class JobsService {
   currentFilter = new Subject();
+  focusSearchForm = new Subject();
   allJobs: any;
 
   constructor( private http: HttpClient ) { }

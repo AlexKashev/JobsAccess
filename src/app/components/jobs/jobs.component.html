@@ -22,8 +22,9 @@
 
     <p *ngIf="!jobs.length">Sorry but there are not available jobs for you search. You can start a new search from the
       button below.</p>
-    <button mat-flat-button class="new-search-button">
-      Start a new one
+
+    <button mat-flat-button class="new-search-button" (click)="goToSearchForm()">
+      Start a new search
     </button>
   </div>
 </section>

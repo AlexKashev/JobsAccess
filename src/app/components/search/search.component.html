@@ -4,7 +4,7 @@
   <form [formGroup]="searchForm">
     <mat-form-field appearance="fill">
       <mat-label>Search by job title, company or key word</mat-label>
-      <input matInput formControlName="all">
+      <input #search matInput formControlName="all">
     </mat-form-field>
 
     <mat-form-field appearance="fill">

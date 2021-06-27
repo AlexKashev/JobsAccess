@@ -15,18 +15,15 @@ export class JobsComponent implements OnInit {
   } );
 
   jobs = [];
+  currentFilterSub: any;
 
   constructor( private statusService: StatusService, private jobsService: JobsService ) { }
 
   ngOnInit(): void {
-    // this.statusService.getStatus().then( ( result: any ) => {
-    //   console.log( result.status );
-    // } );
-
     this.getCurrentJobsData();
 
     // subscribe for filtering
-    this.jobsService.currentFilter.subscribe( ( data: string ) => {
+    this.currentFilterSub = this.jobsService.currentFilter.subscribe( ( data: string ) => {
       this.getCurrentJobsData( data );
     } );
   }
@@ -36,6 +33,14 @@ export class JobsComponent implements OnInit {
       this.jobs = result;
       console.log( result );
     } );
+  }
+
+  goToSearchForm() {
+    this.jobsService.focusSearchForm.next();
+  }
+
+  ngOnDestroy() {
+    this.currentFilterSub.unsubscribe();
   }
 
 }
